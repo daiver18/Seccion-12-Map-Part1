@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Home");
 
         if (savedInstanceState == null){
-            currentlyFragment = new WelcomeFragment();
+            currentlyFragment = new MapFragment();
             changeFragment(currentlyFragment);
         }
 
