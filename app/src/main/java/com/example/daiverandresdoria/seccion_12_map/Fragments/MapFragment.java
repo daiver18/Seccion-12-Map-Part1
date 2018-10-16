@@ -205,12 +205,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
             case LOCATION_CODE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if ((grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     Toast.makeText(getContext(),"Permission Granted yay",Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getContext(),"Permission Denied boo",Toast.LENGTH_SHORT).show();
                 }
-                return;
+                break;
+                default:
+                    break;
         }
     }
 }
